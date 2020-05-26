@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.5)
 
 project(libbezier_curve )
+add_definitions(-std=c++11)
 
 set(PROJECT_TARGET_LIB_NAME "bezier_curve")
 

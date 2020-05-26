@@ -5,7 +5,7 @@ file(GLOB SOURCE_FILES
   ${CMAKE_CURRENT_LIST_DIR}/bezier/*.hpp
 )
 
-find_package(Eigen3 REQUIRED NO_MODULE)
+find_package(Eigen3 REQUIRED)
 
 add_library(${LIBRARY_NAME}
   SHARED
@@ -17,10 +17,10 @@ target_include_directories(${LIBRARY_NAME} PUBLIC
   $<INSTALL_INTERFACE:include>
 )
 
-target_compile_features(${LIBRARY_NAME}
-  PRIVATE
-    cxx_std_11
-)
+# target_compile_features(${LIBRARY_NAME}
+#  PRIVATE
+#    cxx_std_11
+# )
 
 target_compile_options(${LIBRARY_NAME}
   PRIVATE
@@ -28,7 +28,7 @@ target_compile_options(${LIBRARY_NAME}
     $<$<CONFIG:Release>:-O3>
 )
 
-target_link_libraries(${LIBRARY_NAME}
-  PUBLIC
-    Eigen3::Eigen
-)
+# target_link_libraries(${LIBRARY_NAME}
+#   PUBLIC
+#     Eigen3::Eigen
+# )
